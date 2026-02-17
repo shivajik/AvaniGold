@@ -3,7 +3,13 @@ import type { Config } from "@react-router/dev/config";
 
 export default {
   ssr: true,
-  presets: [vercelPreset()],
+  presets: [
+    vercelPreset({
+      config: {
+        runtime: "nodejs",
+      },
+    }),
+  ],
   future: {
     unstable_optimizeDeps: true,
   },
