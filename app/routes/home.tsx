@@ -2,7 +2,7 @@ import type { Route } from "./+types/home";
 import { Link } from "react-router";
 
 export const config = {
-  runtime: "edge",
+  runtime: "nodejs",
 };
 
 import { Sparkles, Award, Shield, TrendingUp, Leaf, Zap, CheckCircle, Star, ArrowRight } from "lucide-react";
