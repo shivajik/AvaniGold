@@ -10,7 +10,19 @@ export interface Product {
   maturityDays: string;
 }
 
-export const productCategories = ["All", "Soyabean", "Hybrid Maize", "Hybrid Bajra", "Hybrid Jowar"];
+export const productCategories = [
+  "All",
+  "Soyabean",
+  "Hybrid Maize",
+  "Hybrid Bajra",
+  "Hybrid Jowar",
+  "Bengal Gram",
+  "Red Gram",
+  "Wheat",
+  "Paddy",
+  "Hybrid Paddy",
+  "Hybrid Sunflower",
+];
 
 export const products: Product[] = [
   // Soyabean
@@ -150,6 +162,182 @@ export const products: Product[] = [
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "108-160 days"
+  },
+  // Bengal Gram
+  {
+    id: "bengalgram-soham-21",
+    name: "SOHAM-21 (Re. Bengalgram)",
+    category: "Bengal Gram",
+    description: "High yielding and Tolerant to fusarium wilt. Suitable for all soil types.",
+    features: [
+      "Spreading plant type",
+      "Suitable for rainfed and irrigated condition",
+      "Medium maturing variety"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yielding",
+    maturityDays: "100-110 days"
+  },
+  // Red Gram
+  {
+    id: "redgram-mamta",
+    name: "MAMTA (Re. Red Gram)",
+    category: "Red Gram",
+    description: "Tolerant to sterility mosaic. Indeterminate plant type.",
+    features: [
+      "Red seed colour",
+      "Indeterminate plant type",
+      "High yield potential"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "20-25 Q/ha",
+    maturityDays: "160-170 days"
+  },
+  // Wheat
+  {
+    id: "wheat-shri-hari-111",
+    name: "SHRI HARI-111 (Re. Wheat)",
+    category: "Wheat",
+    description: "More yields with minimum irrigation. Moderately tolerant to major diseases and pests.",
+    features: [
+      "Plant Height 80-90 cm",
+      "Dark Green Leaves with profuse tillering",
+      "Ovate, Bold, Amber coloured grains"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "105-115 days"
+  },
+  {
+    id: "wheat-avni-400",
+    name: "AVNI-400 (Re. Wheat)",
+    category: "Wheat",
+    description: "More yields with minimum irrigation. Moderately tolerant to major diseases and pests.",
+    features: [
+      "Plant Height 85-95 cm",
+      "Dark Green Leaves with profuse tillering",
+      "Ovate, Bold, Amber coloured grains"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "115-125 days"
+  },
+  {
+    id: "wheat-ankit-555",
+    name: "ANKIT-555 (Re. Wheat)",
+    category: "Wheat",
+    description: "More yields with minimum irrigation. Moderately tolerant to major diseases and pests.",
+    features: [
+      "Plant Height 85-95 cm",
+      "Dark Green Leaves with profuse tillering",
+      "Ovate, Bold, Amber coloured grains"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "115-125 days"
+  },
+  // Paddy
+  {
+    id: "paddy-sarthak",
+    name: "SARTHAK (Re. Paddy)",
+    category: "Paddy",
+    description: "Excellent cooking quality. Super Fine grain type. Logging tolerant.",
+    features: [
+      "Plant Height 115-120 cm",
+      "No. of productive tillers: 20-25",
+      "No. of grains/panicle: 220-250",
+      "Tolerant to major disease & insect"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "120-125 days"
+  },
+  {
+    id: "paddy-nitali",
+    name: "NITALI (Re. Paddy)",
+    category: "Paddy",
+    description: "Excellent cooking quality. Super Fine grain type. Logging tolerant.",
+    features: [
+      "Plant Height 115-120 cm",
+      "No. of productive tillers: 20-25",
+      "No. of grains/panicle: 220-250",
+      "Tolerant to major disease & insect"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "135-140 days"
+  },
+  {
+    id: "paddy-krushna",
+    name: "KRUSHNA (Re. Paddy)",
+    category: "Paddy",
+    description: "Excellent cooking quality. Extra Long Slender grain type. Logging tolerant.",
+    features: [
+      "Plant Height 120-125 cm",
+      "No. of productive tillers: 20-25",
+      "No. of grains/panicle: 220-250",
+      "Tolerant to major disease & insect"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    certifications: ["Quality Tested"],
+    yieldPotential: "High Yield",
+    maturityDays: "130-140 days"
+  },
+  // Hybrid Paddy
+  {
+    id: "hybrid-paddy-avni-999",
+    name: "AVNI-999 (Hybrid Paddy)",
+    category: "Hybrid Paddy",
+    description: "Excellent cooking quality. Medium Bold grain type. Logging tolerant.",
+    features: [
+      "Plant Height 115-120 cm",
+      "No. of productive tillers: 30-35",
+      "No. of grains/panicle: 250-270",
+      "Tolerant to major disease & insect"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    certifications: ["Certified Hybrid"],
+    yieldPotential: "High Yield",
+    maturityDays: "120-125 days"
+  },
+  {
+    id: "hybrid-paddy-avni-801",
+    name: "AVNI-801 (Hybrid Paddy)",
+    category: "Hybrid Paddy",
+    description: "Excellent cooking quality. Medium Bold grain type. Logging tolerant.",
+    features: [
+      "Plant Height 115-120 cm",
+      "No. of productive tillers: 30-35",
+      "No. of grains/panicle: 250-270",
+      "Tolerant to major disease & insect"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    certifications: ["Certified Hybrid"],
+    yieldPotential: "High Yield",
+    maturityDays: "135-140 days"
+  },
+  // Hybrid Sunflower
+  {
+    id: "sunflower-tejas",
+    name: "TEJAS (Hybrid Sunflower)",
+    category: "Hybrid Sunflower",
+    description: "High oil content (40.3%). Tolerant to Bud Necrosis.",
+    features: [
+      "Plant Height 160-170 cm",
+      "Head Diameter 20-22 cm",
+      "Grain Yield 16-18 Qtls"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1597424216785-447475760371?w=800&q=80",
+    certifications: ["Certified Hybrid"],
+    yieldPotential: "16-18 Qtls",
+    maturityDays: "90-100 days"
   },
   // Hybrid Bajra
   {
