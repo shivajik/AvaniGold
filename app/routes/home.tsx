@@ -1,5 +1,10 @@
 import type { Route } from "./+types/home";
 import { Link } from "react-router";
+
+export const config = {
+  runtime: "edge",
+};
+
 import { Sparkles, Award, Shield, TrendingUp, Leaf, Zap, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Header } from "~/components/header/header";
 import { Footer } from "~/components/footer/footer";

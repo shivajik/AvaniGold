@@ -1,4 +1,5 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 import type { Route } from "./+types/root";
 import { Toaster } from "./components/ui/toaster/toaster";
@@ -64,6 +65,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Toaster />
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
