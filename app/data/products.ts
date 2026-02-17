@@ -387,5 +387,21 @@ export const products: Product[] = [
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "105-110 days"
+  },
+  {
+    id: "sagar-11",
+    name: "SAGAR-11 (Re. Bengalgram)",
+    category: "Hybrid Maize",
+    description: "Widely adapted and suitable for all sorghum growing areas. Medium maturing hybrid.",
+    features: [
+      "Spreading plant type",
+      "Suitable for all soil type",
+      "Suitable for rainfed and irrigated condition",
+      "High yielding and Tolerant to fusarium wilt"
+    ],
+    imageUrl: "",
+    certifications: ["Quality Certified", "High Yield"],
+    yieldPotential: "High Yield",
+    maturityDays: "100-110 days"
   }
 ];
