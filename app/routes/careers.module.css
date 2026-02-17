@@ -1,0 +1,287 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  position: relative;
+  padding: calc(var(--space-9) * 1.5) var(--space-5);
+  background: var(--color-accent-2);
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, var(--color-accent-4) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-accent-4) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-accent-4) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-accent-4) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0;
+  opacity: 0.3;
+}
+
+.heroContent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-3);
+  font-weight: 800;
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-5);
+}
+
+.heroText {
+  font-size: var(--font-size-3);
+  color: var(--color-neutral-11);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.benefitsSection,
+.jobsSection {
+  padding: var(--space-9) var(--space-5);
+}
+
+.benefitsSection {
+  background: var(--color-neutral-1);
+}
+
+.jobsSection {
+  background: var(--color-neutral-2);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: var(--font-size-0);
+  font-weight: 700;
+  color: var(--color-accent-9);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-2);
+  color: var(--color-neutral-12);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.benefitCard {
+  padding: var(--space-6);
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-4);
+  text-align: center;
+  transition: all var(--ease-3) 0.3s;
+}
+
+.benefitCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px var(--color-neutral-4);
+  border-color: var(--color-accent-7);
+}
+
+.benefitIconWrapper {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-3);
+  border-radius: var(--radius-round);
+}
+
+.benefitIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-accent-11);
+}
+
+.benefitCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-3);
+}
+
+.benefitCard p {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: 1.6;
+}
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jobCard {
+  padding: var(--space-7);
+  background: var(--color-neutral-1);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-4);
+  transition: all var(--ease-3) 0.3s;
+}
+
+.jobCard:hover {
+  border-color: var(--color-accent-7);
+  box-shadow: 0 8px 24px var(--color-neutral-4);
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.jobTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-3);
+}
+
+.jobMeta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-10);
+}
+
+.metaIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.applyBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.jobDescription {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.jobDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.detailSection h4 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-4);
+}
+
+.detailSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailSection li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+}
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-success-9);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.jobFooter {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-neutral-4);
+}
+
+.postedDate {
+  font-size: var(--font-size-0);
+  color: var(--color-neutral-10);
+}
+
+@media (max-width: 1024px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jobDetails {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobHeader {
+    flex-direction: column;
+  }
+
+  .applyBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

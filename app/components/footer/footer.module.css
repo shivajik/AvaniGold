@@ -1,0 +1,78 @@
+.footer {
+  background: var(--color-accent-9);
+  color: var(--color-accent-contrast);
+  margin-top: var(--space-9);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.section h3 {
+  font: 600 var(--font-size-2) var(--font-neo-grotesque);
+  margin-bottom: var(--space-4);
+  color: var(--color-accent-contrast);
+}
+
+.section p {
+  color: var(--color-accent-1);
+  line-height: var(--font-lineheight-3);
+  margin-bottom: var(--space-3);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.link {
+  color: var(--color-accent-1);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.link:hover {
+  color: var(--color-accent-contrast);
+}
+
+.linkIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.bottom {
+  padding-top: var(--space-6);
+  border-top: var(--border-size-1) solid var(--color-accent-8);
+  text-align: center;
+  color: var(--color-accent-1);
+  font-size: var(--font-size-0);
+}
+
+.certifications {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+.badge {
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-accent-8);
+  border-radius: var(--radius-3);
+  font-size: var(--font-size-0);
+  font-weight: 600;
+  color: var(--color-accent-contrast);
+}

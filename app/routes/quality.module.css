@@ -1,0 +1,297 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  position: relative;
+  padding: calc(var(--space-9) * 1.5) var(--space-5);
+  background: linear-gradient(135deg, var(--color-accent-9) 0%, var(--color-accent-11) 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.heroContent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroIcon {
+  width: 64px;
+  height: 64px;
+  color: var(--color-accent-contrast);
+  margin: 0 auto var(--space-5);
+  opacity: 0.9;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-3);
+  font-weight: 800;
+  color: var(--color-accent-contrast);
+  margin-bottom: var(--space-4);
+}
+
+.heroText {
+  font-size: var(--font-size-3);
+  color: var(--color-accent-contrast);
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.statsSection {
+  padding: var(--space-8) var(--space-5);
+  background: var(--color-neutral-2);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.statCard {
+  padding: var(--space-6);
+  background: var(--color-neutral-1);
+  border: 2px solid var(--color-neutral-4);
+  border-radius: var(--radius-4);
+  text-align: center;
+  transition: all var(--ease-3) 0.3s;
+}
+
+.statCard:hover {
+  border-color: var(--color-accent-7);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--color-neutral-4);
+}
+
+.statIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-accent-9);
+  margin: 0 auto var(--space-4);
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-2);
+  font-weight: 800;
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-2);
+}
+
+.statLabel {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-10);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.processSection {
+  padding: var(--space-9) var(--space-5);
+  background: var(--color-neutral-1);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: var(--font-size-0);
+  font-weight: 700;
+  color: var(--color-accent-9);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-2);
+  color: var(--color-neutral-12);
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.processCard {
+  padding: var(--space-7);
+  background: var(--color-neutral-2);
+  border: 1px solid var(--color-neutral-4);
+  border-radius: var(--radius-4);
+  transition: all var(--ease-3) 0.3s;
+}
+
+.processCard:hover {
+  background: var(--color-neutral-1);
+  border-color: var(--color-accent-7);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--color-neutral-4);
+}
+
+.processHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.processNumber {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-6);
+  font-weight: 800;
+  color: var(--color-accent-5);
+  line-height: 1;
+}
+
+.processIcon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-accent-9);
+}
+
+.processCard h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-3);
+}
+
+.processCard p {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: 1.7;
+}
+
+.facilitiesSection,
+.standardsSection {
+  padding: var(--space-9) var(--space-5);
+}
+
+.facilitiesSection {
+  background: var(--color-neutral-2);
+}
+
+.standardsSection {
+  background: var(--color-neutral-1);
+}
+
+.facilitiesGrid,
+.standardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.facilitiesImage {
+  border-radius: var(--radius-4);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.facilitiesImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ease-3) 0.4s;
+}
+
+.facilitiesImage:hover img {
+  transform: scale(1.05);
+}
+
+.facilitiesContent,
+.standardsContent {
+  padding: var(--space-6);
+}
+
+.facilitiesContent h2,
+.standardsContent h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-fluid-2);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-5);
+}
+
+.facilitiesContent p,
+.standardsContent p {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.facilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facilitiesList li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-11);
+}
+
+.listIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-success-9);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .statsGrid,
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facilitiesGrid,
+  .standardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilitiesImage {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}

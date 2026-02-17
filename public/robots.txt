@@ -1,0 +1,10 @@
+# robots.txt for AVNIGOLD Seeds
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://avnigoldseeds.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

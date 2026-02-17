@@ -1,0 +1,101 @@
+/* Typography */
+html {
+  --font-display: 800 var(--font-size-fluid-3) var(--font-neo-grotesque);
+  --font-heading: 700 var(--font-size-fluid-2) var(--font-neo-grotesque);
+  --font-subheading: 600 var(--font-size-fluid-1) var(--font-neo-grotesque);
+  --font-body: var(--font-size-fluid-0) var(--font-neo-grotesque);
+  --font-caption: var(--font-size-0) var(--font-neo-grotesque);
+  --font-code: var(--font-size-fluid-0) var(--font-monospace-code);
+}
+
+html {
+  /* Neutral colors - Clean slate tones */
+  --color-neutral-1: var(--slate-1);
+  --color-neutral-2: var(--slate-2);
+  --color-neutral-3: var(--slate-3);
+  --color-neutral-4: var(--slate-4);
+  --color-neutral-5: var(--slate-5);
+  --color-neutral-6: var(--slate-6);
+  --color-neutral-7: var(--slate-7);
+  --color-neutral-8: var(--slate-8);
+  --color-neutral-9: var(--slate-9);
+  --color-neutral-10: var(--slate-10);
+  --color-neutral-11: var(--slate-11);
+  --color-neutral-12: var(--slate-12);
+  --color-neutral-contrast: var(--slate-contrast);
+
+  /* Accent colors - Rich amber/gold for premium seeds */
+  --color-accent-1: var(--amber-1);
+  --color-accent-2: var(--amber-2);
+  --color-accent-3: var(--amber-3);
+  --color-accent-4: var(--amber-4);
+  --color-accent-5: var(--amber-5);
+  --color-accent-6: var(--amber-6);
+  --color-accent-7: var(--amber-7);
+  --color-accent-8: var(--amber-8);
+  --color-accent-9: var(--amber-9);
+  --color-accent-10: var(--amber-10);
+  --color-accent-11: var(--amber-11);
+  --color-accent-12: var(--amber-12);
+  --color-accent-contrast: var(--amber-contrast);
+
+  /* Error colors */
+  --color-error-1: var(--tomato-1);
+  --color-error-2: var(--tomato-2);
+  --color-error-3: var(--tomato-3);
+  --color-error-4: var(--tomato-4);
+  --color-error-5: var(--tomato-5);
+  --color-error-6: var(--tomato-6);
+  --color-error-7: var(--tomato-7);
+  --color-error-8: var(--tomato-8);
+  --color-error-9: var(--tomato-9);
+  --color-error-10: var(--tomato-10);
+  --color-error-11: var(--tomato-11);
+  --color-error-12: var(--tomato-12);
+  --color-error-contrast: var(--tomato-contrast);
+
+  /* Success colors */
+  --color-success-1: var(--teal-1);
+  --color-success-2: var(--teal-2);
+  --color-success-3: var(--teal-3);
+  --color-success-4: var(--teal-4);
+  --color-success-5: var(--teal-5);
+  --color-success-6: var(--teal-6);
+  --color-success-7: var(--teal-7);
+  --color-success-8: var(--teal-8);
+  --color-success-9: var(--teal-9);
+  --color-success-10: var(--teal-10);
+  --color-success-11: var(--teal-11);
+  --color-success-12: var(--teal-12);
+  --color-success-contrast: var(--teal-contrast);
+
+  /* Growth accent - Vibrant lime for growth & vitality */
+  --color-growth-1: var(--lime-1);
+  --color-growth-2: var(--lime-2);
+  --color-growth-3: var(--lime-3);
+  --color-growth-4: var(--lime-4);
+  --color-growth-5: var(--lime-5);
+  --color-growth-6: var(--lime-6);
+  --color-growth-7: var(--lime-7);
+  --color-growth-8: var(--lime-8);
+  --color-growth-9: var(--lime-9);
+  --color-growth-10: var(--lime-10);
+  --color-growth-11: var(--lime-11);
+  --color-growth-12: var(--lime-12);
+  --color-growth-contrast: var(--lime-contrast);
+
+  /* Trust accent - Deep indigo for professionalism */
+  --color-trust-1: var(--indigo-1);
+  --color-trust-2: var(--indigo-2);
+  --color-trust-3: var(--indigo-3);
+  --color-trust-4: var(--indigo-4);
+  --color-trust-5: var(--indigo-5);
+  --color-trust-6: var(--indigo-6);
+  --color-trust-7: var(--indigo-7);
+  --color-trust-8: var(--indigo-8);
+  --color-trust-9: var(--indigo-9);
+  --color-trust-10: var(--indigo-10);
+  --color-trust-11: var(--indigo-11);
+  --color-trust-12: var(--indigo-12);
+  --color-trust-contrast: var(--indigo-contrast);
+}
