@@ -1,7 +1,7 @@
 # AVNIGOLD Seeds Website
 
 ## Overview
-A full-stack React Router v7 website for AVNIGOLD Seeds Private Limited, an agricultural seeds company based in Mandsaur, Madhya Pradesh. The site includes pages for Home, About Us, Products, R&D & Quality, Knowledge Hub (Blog), Careers, and Contact.
+A full-stack React Router v7 website for AVNIGOLD Seeds Private Limited, an agricultural seeds company based in Mandsaur, Madhya Pradesh. The site includes pages for Home, About Us, Products, R&D & Quality, Careers, and Contact.
 
 ## Tech Stack
 - **Framework**: React Router v7 (with SSR)

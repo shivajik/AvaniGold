@@ -55,7 +55,6 @@ export function Header() {
       hasSubmenu: true,
     },
     { path: "/quality", label: "R&D & Quality", icon: FlaskConical },
-    { path: "/blog", label: "Knowledge Hub", icon: BookOpen },
     { path: "/careers", label: "Careers", icon: Briefcase },
     { path: "/contact", label: "Get in Touch", icon: MessageCircle },
   ];
@@ -204,10 +203,6 @@ export function Header() {
                                 <Link to="/quality" className={styles.quickLink}>
                                   <FlaskConical size={18} />
                                   <span>Quality Assurance</span>
-                                </Link>
-                                <Link to="/blog" className={styles.quickLink}>
-                                  <BookOpen size={18} />
-                                  <span>Farming Guides</span>
                                 </Link>
                                 <Link to="/contact" className={styles.quickLink}>
                                   <MessageCircle size={18} />

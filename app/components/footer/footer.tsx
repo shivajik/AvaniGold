@@ -31,9 +31,6 @@ export function Footer() {
               <Link to="/quality" className={styles.link}>
                 Quality & R&D
               </Link>
-              <Link to="/blog" className={styles.link}>
-                Knowledge Center
-              </Link>
               <Link to="/careers" className={styles.link}>
                 Careers
               </Link>
