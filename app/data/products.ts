@@ -38,7 +38,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    imageUrl: "/images/products/soybean_1.jpg",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "90 to 100 days"
@@ -55,7 +55,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    imageUrl: "/images/products/soybean_2.jpg",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "100 to 105 days"
@@ -72,7 +72,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    imageUrl: "/images/products/soybean_1.jpg",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "90 to 100 days"
@@ -89,7 +89,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    imageUrl: "/images/products/soybean_2.jpg",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "100 to 105 days"
@@ -107,7 +107,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "145-155 days North India (Winter)"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    imageUrl: "/images/products/maize_1.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "110-155 days"
@@ -124,7 +124,7 @@ export const products: Product[] = [
       "115-125 days Central & South India",
       "145-155 days North India (Winter)"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    imageUrl: "/images/products/maize_2.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "105-155 days"
@@ -141,7 +141,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    imageUrl: "/images/products/maize_1.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "108-160 days"
@@ -158,7 +158,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    imageUrl: "/images/products/maize_2.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "108-160 days"
@@ -174,7 +174,7 @@ export const products: Product[] = [
       "Suitable for rainfed and irrigated condition",
       "Medium maturing variety"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=800&q=80",
+    imageUrl: "/images/products/bengalgram.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yielding",
     maturityDays: "100-110 days"
@@ -190,7 +190,7 @@ export const products: Product[] = [
       "Indeterminate plant type",
       "High yield potential"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1515942400420-2b98fed1f515?w=800&q=80",
+    imageUrl: "/images/products/redgram.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "20-25 Q/ha",
     maturityDays: "160-170 days"
@@ -206,7 +206,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    imageUrl: "/images/products/wheat_1.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "105-115 days"
@@ -221,7 +221,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    imageUrl: "/images/products/wheat_2.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "115-125 days"
@@ -236,7 +236,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+    imageUrl: "/images/products/wheat_1.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "115-125 days"
@@ -253,7 +253,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    imageUrl: "/images/products/paddy_1.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "120-125 days"
@@ -269,7 +269,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    imageUrl: "/images/products/paddy_2.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "135-140 days"
@@ -285,7 +285,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    imageUrl: "/images/products/paddy_1.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "130-140 days"
@@ -302,7 +302,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 250-270",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    imageUrl: "/images/products/paddy_2.jpg",
     certifications: ["Certified Hybrid"],
     yieldPotential: "High Yield",
     maturityDays: "120-125 days"
@@ -318,7 +318,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 250-270",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1536633390841-42fd93277a65?w=800&q=80",
+    imageUrl: "/images/products/paddy_1.jpg",
     certifications: ["Certified Hybrid"],
     yieldPotential: "High Yield",
     maturityDays: "135-140 days"
@@ -334,7 +334,7 @@ export const products: Product[] = [
       "Head Diameter 20-22 cm",
       "Grain Yield 16-18 Qtls"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1597424216785-447475760371?w=800&q=80",
+    imageUrl: "/images/products/sunflower.jpg",
     certifications: ["Certified Hybrid"],
     yieldPotential: "16-18 Qtls",
     maturityDays: "90-100 days"
@@ -350,7 +350,7 @@ export const products: Product[] = [
       "Grey brown, obovate & bold seeds",
       "Matures in 75-80 Days"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    imageUrl: "/images/products/bajra.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "75-80 days"
@@ -367,7 +367,7 @@ export const products: Product[] = [
       "Bold, circular and smooth grains",
       "Matures in 105-110 days"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    imageUrl: "/images/products/jowar_1.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "105-110 days"
@@ -383,7 +383,7 @@ export const products: Product[] = [
       "Bold, circular and smooth grains",
       "Matures in 105-110 days"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    imageUrl: "/images/products/jowar_2.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "105-110 days"
