@@ -25,6 +25,9 @@ export function meta({}: Route.MetaArgs) {
       content: "500+ varieties of certified quality seeds with superior germination rates.",
     },
     { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://avnigoldseeds.com/products" },
+    { property: "og:image", content: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=630&fit=crop" },
+    { name: "twitter:card", content: "summary_large_image" },
     { name: "robots", content: "index, follow" },
   ];
 }

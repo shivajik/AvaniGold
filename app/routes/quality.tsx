@@ -22,6 +22,9 @@ export function meta({}: Route.MetaArgs) {
       content: "98% germination rate. 100% quality tested. State-of-the-art research facilities.",
     },
     { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://avnigoldseeds.com/quality" },
+    { property: "og:image", content: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=630&fit=crop" },
+    { name: "twitter:card", content: "summary_large_image" },
     { name: "robots", content: "index, follow" },
   ];
 }
