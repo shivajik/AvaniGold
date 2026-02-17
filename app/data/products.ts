@@ -10,113 +10,194 @@ export interface Product {
   maturityDays: string;
 }
 
-export const productCategories = ["All", "Vegetable Seeds", "Field Crops", "Hybrid Seeds", "Organic Seeds"];
+export const productCategories = ["All", "Soyabean", "Hybrid Maize", "Hybrid Bajra", "Hybrid Jowar"];
 
 export const products: Product[] = [
+  // Soyabean
   {
-    id: "tomato-hybrid-001",
-    name: "AVNIGOLD Tomato Premium TH-501",
-    category: "Vegetable Seeds",
-    description:
-      "Superior hybrid tomato variety with excellent disease resistance and consistent fruit quality. Ideal for commercial farming in Central India.",
+    id: "soybean-mahalaxmi",
+    name: "MAHALAXMI (Re. Soyabean)",
+    category: "Soyabean",
+    description: "Highest Yielder of the industry. Sustain water logged conditions & plant stand well even if it get over matured.",
     features: [
-      "High disease resistance",
-      "Uniform fruit size and shape",
-      "Extended shelf life",
-      "Excellent yield potential",
-      "Suitable for multiple seasons",
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=800&q=80",
-    certifications: ["Quality Tested", "Certified Seeds"],
-    yieldPotential: "55-75 tons/hectare",
-    maturityDays: "65-70 days",
-  },
-  {
-    id: "soybean-premium-002",
-    name: "AVNIGOLD Soybean Elite SB-302",
-    category: "Field Crops",
-    description:
-      "Premium soybean variety with high oil content and excellent protein quality. Well-suited for MP and Rajasthan regions.",
-    features: [
-      "High oil and protein content",
-      "Disease resistant variety",
-      "Drought tolerant",
-      "Excellent pod filling",
-      "Superior germination",
+      "Plant height is 2.5 to 2.75 feet",
+      "60% pods 3 to 4 seeds",
+      "Non Shattering, Branched plant thus profuse pod formation",
+      "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
+      "Easy for harvesting with the combine harvester"
     ],
     imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
     certifications: ["Quality Tested", "Certified Seeds"],
-    yieldPotential: "20-25 quintals/hectare",
-    maturityDays: "95-105 days",
+    yieldPotential: "Highest Yielder",
+    maturityDays: "90 to 100 days"
   },
   {
-    id: "brinjal-hybrid-003",
-    name: "AVNIGOLD Brinjal Hybrid BR-201",
-    category: "Vegetable Seeds",
-    description: "High-yielding brinjal variety with deep purple color and excellent fruit quality. Perfect for commercial cultivation.",
+    id: "soybean-shambho",
+    name: "SHAMBHO (Re. Soyabean)",
+    category: "Soyabean",
+    description: "Highest Yielder of the industry. Sustain water logged conditions & plant stand well even if it get over matured.",
     features: [
-      "Deep purple glossy skin",
-      "Tender and seedless fruit",
-      "High disease tolerance",
-      "Long bearing period",
-      "Uniform fruit size",
+      "Plant height is 2.5 to 2.75 feet",
+      "60% pods 3 to 4 seeds",
+      "Non Shattering, Branched plant thus profuse pod formation",
+      "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
+      "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1659261200833-ec8761558af7?w=800&q=80",
-    certifications: ["Premium Quality", "Tested Variety"],
-    yieldPotential: "45-55 tons/hectare",
-    maturityDays: "60-65 days",
+    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    certifications: ["Quality Tested", "Certified Seeds"],
+    yieldPotential: "Highest Yielder",
+    maturityDays: "100 to 105 days"
   },
   {
-    id: "chilli-hybrid-004",
-    name: "AVNIGOLD Chilli Fire CH-401",
-    category: "Vegetable Seeds",
-    description:
-      "High-pungency chilli variety with excellent color and spice content. Ideal for commercial farming and spice production.",
+    id: "soybean-chitransh",
+    name: "CHITRANSH (Re. Soyabean)",
+    category: "Soyabean",
+    description: "Highest Yielder of the industry. Sustain water logged conditions & plant stand well even if it get over matured.",
     features: [
-      "High pungency level",
-      "Bright red color at maturity",
-      "Excellent drying quality",
-      "Disease resistant",
-      "Strong plant vigor",
+      "Plant height is 2.5 to 2.75 feet",
+      "60% pods 3 to 4 seeds",
+      "Non Shattering, Branched plant thus profuse pod formation",
+      "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
+      "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1583663848850-46af132dc08e?w=800&q=80",
-    certifications: ["Quality Certified", "High Yield Variety"],
-    yieldPotential: "40-50 quintals/hectare",
-    maturityDays: "70-80 days",
+    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    certifications: ["Quality Tested", "Certified Seeds"],
+    yieldPotential: "Highest Yielder",
+    maturityDays: "90 to 100 days"
   },
   {
-    id: "maize-hybrid-005",
-    name: "AVNIGOLD Maize Gold MZ-601",
-    category: "Field Crops",
-    description:
-      "Superior hybrid maize with excellent grain quality and high yield potential. Suitable for kharif season in Central India.",
+    id: "soybean-surekha",
+    name: "SUREKHA (Re. Soyabean)",
+    category: "Soyabean",
+    description: "Highest Yielder of the industry. Sustain water logged conditions & plant stand well even if it get over matured.",
     features: [
-      "Excellent grain quality",
-      "Disease resistant",
-      "Good cob filling",
-      "Drought tolerant",
-      "High grain weight",
+      "Plant height is 2.5 to 2.75 feet",
+      "60% pods 3 to 4 seeds",
+      "Non Shattering, Branched plant thus profuse pod formation",
+      "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
+      "Easy for harvesting with the combine harvester"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800&q=80",
+    certifications: ["Quality Tested", "Certified Seeds"],
+    yieldPotential: "Highest Yielder",
+    maturityDays: "100 to 105 days"
+  },
+  // Hybrid Maize
+  {
+    id: "maize-amh-7879",
+    name: "AMH-7879 (Hybrid Maize)",
+    category: "Hybrid Maize",
+    description: "High yield potential with Stay Green. Tall, Non lodging and Wide Adaptability.",
+    features: [
+      "Uniform ears with excellent tip filling",
+      "Tolerant to foliar diseases",
+      "Matures in 110-115 days (Rainy Season)",
+      "120-130 days Central & South India",
+      "145-155 days North India (Winter)"
     ],
     imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
     certifications: ["Certified Hybrid", "Quality Assured"],
-    yieldPotential: "70-85 quintals/hectare",
-    maturityDays: "90-100 days",
+    yieldPotential: "High Yield Potential",
+    maturityDays: "110-155 days"
   },
   {
-    id: "okra-hybrid-006",
-    name: "AVNIGOLD Okra Premium OK-301",
-    category: "Organic Seeds",
-    description: "Premium okra variety with tender pods and extended harvest period. Excellent for home gardens and commercial farming.",
+    id: "maize-amh-7181",
+    name: "AMH-7181 (Hybrid Maize)",
+    category: "Hybrid Maize",
+    description: "High yield potential under irrigated conditions. Non lodging with erect plant type.",
     features: [
-      "Dark green tender pods",
-      "Extended picking period",
-      "Uniform pod size",
-      "High yield potential",
-      "Disease resistant",
+      "Good response to high management",
+      "Light orange semi flint kernels",
+      "Matures in 105-110 days (Rainy)",
+      "115-125 days Central & South India",
+      "145-155 days North India (Winter)"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=800&q=80",
-    certifications: ["Quality Certified", "Premium Variety"],
-    yieldPotential: "12-15 tons/hectare",
-    maturityDays: "45-50 days",
+    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    certifications: ["Certified Hybrid", "Quality Assured"],
+    yieldPotential: "High Yield Potential",
+    maturityDays: "105-155 days"
   },
+  {
+    id: "maize-amh-7700",
+    name: "AMH-7700 (Hybrid Maize)",
+    category: "Hybrid Maize",
+    description: "Tall and Non lodging, Drought tolerant.",
+    features: [
+      "Uniform ears with good photosynthetic efficiency",
+      "Yellow flint / semi flint kernels",
+      "Matures in 108-118 days (Rainy)",
+      "120-130 days Central & South India",
+      "150-160 days North India (Winter)"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    certifications: ["Certified Hybrid", "Quality Assured"],
+    yieldPotential: "High Yield Potential",
+    maturityDays: "108-160 days"
+  },
+  {
+    id: "maize-amh-2535",
+    name: "AMH-2535 (Hybrid Maize)",
+    category: "Hybrid Maize",
+    description: "Tall and Non lodging, Drought tolerant.",
+    features: [
+      "Uniform ears with good photosynthetic efficiency",
+      "Yellow flint / semi flint kernels",
+      "Matures in 108-118 days (Rainy)",
+      "120-130 days Central & South India",
+      "150-160 days North India (Winter)"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=80",
+    certifications: ["Certified Hybrid", "Quality Assured"],
+    yieldPotential: "High Yield Potential",
+    maturityDays: "108-160 days"
+  },
+  // Hybrid Bajra
+  {
+    id: "bajra-abh-9191",
+    name: "ABH-9191 (Hybrid Bajra)",
+    category: "Hybrid Bajra",
+    description: "Medium maturing hybrid, medium tall.",
+    features: [
+      "Medium long, conical compact panicle",
+      "Grey brown, obovate & bold seeds",
+      "Matures in 75-80 Days"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    certifications: ["Quality Certified", "High Yield"],
+    yieldPotential: "High Yield",
+    maturityDays: "75-80 days"
+  },
+  // Hybrid Jowar
+  {
+    id: "jowar-ajh-vijeta",
+    name: "AJH-VIJETA (Hybrid Jowar)",
+    category: "Hybrid Jowar",
+    description: "Widely adapted and suitable for all sorghum growing areas. Medium maturing hybrid.",
+    features: [
+      "Medium tall plant with dark green leaves",
+      "Long semi-compact symmetrical panicle",
+      "Bold, circular and smooth grains",
+      "Matures in 105-110 days"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    certifications: ["Quality Certified", "High Yield"],
+    yieldPotential: "High Yield",
+    maturityDays: "105-110 days"
+  },
+  {
+    id: "jowar-avni-501",
+    name: "AVNI-501 (Hybrid Jowar)",
+    category: "Hybrid Jowar",
+    description: "Widely adapted and suitable for all sorghum growing areas. Medium maturing hybrid.",
+    features: [
+      "Medium tall plant with dark green leaves",
+      "Long semi-compact symmetrical panicle",
+      "Bold, circular and smooth grains",
+      "Matures in 105-110 days"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?w=800&q=80",
+    certifications: ["Quality Certified", "High Yield"],
+    yieldPotential: "High Yield",
+    maturityDays: "105-110 days"
+  }
 ];
