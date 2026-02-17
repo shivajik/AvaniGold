@@ -6,5 +6,5 @@ Disallow: /api/
 # Sitemap location
 Sitemap: https://avnigoldseeds.com/sitemap.xml
 
-# Crawl delay
-Crawl-delay: 1
+# LLM-friendly content
+# See https://avnigoldseeds.com/llms.txt for structured information about this website
