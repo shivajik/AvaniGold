@@ -399,7 +399,7 @@ export const products: Product[] = [
       "Suitable for rainfed and irrigated condition",
       "High yielding and Tolerant to fusarium wilt"
     ],
-    imageUrl: "",
+    imageUrl: "/images/products/maize_1.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "100-110 days"
