@@ -64,6 +64,12 @@ export function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} AVNIGOLD SEEDS PRIVATE LIMITED. All rights reserved.</p>
+          <p className={styles.credit}>
+            Designed by{" "}
+            <a href="https://www.ksoftsolution.com/" target="_blank" rel="noopener noreferrer">
+              KSoft Solution
+            </a>
+          </p>
         </div>
       </div>
     </footer>

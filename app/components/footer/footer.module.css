@@ -61,6 +61,23 @@
   font-size: var(--font-size-0);
 }
 
+.credit {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-0);
+  color: var(--color-accent-1);
+}
+
+.credit a {
+  color: var(--color-accent-contrast);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s var(--ease);
+}
+
+.credit a:hover {
+  opacity: 0.8;
+}
+
 .certifications {
   display: flex;
   gap: var(--space-4);
