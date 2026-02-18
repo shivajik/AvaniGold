@@ -122,7 +122,7 @@ export default function HomeSlider() {
     "@type": "Organization",
     "name": "AVNIGOLD SEEDS PRIVATE LIMITED",
     "url": "https://avnigoldseeds.com",
-    "logo": "https://avnigoldseeds.com/favicon.svg",
+    "logo": "https://avnigoldseeds.com/logo.png",
     "description": "Premium quality seed supplier based in Mandsaur, Madhya Pradesh, offering vegetable seeds, field crops, and hybrid varieties.",
     "address": {
       "@type": "PostalAddress",

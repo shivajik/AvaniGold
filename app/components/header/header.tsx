@@ -95,8 +95,7 @@ export function Header() {
           <div className={styles.brandSection}>
             <Link to="/" className={styles.logo}>
               <div className={styles.logoIcon}>
-                <Sparkles size={28} />
-              </div>
+                <img src="/logo.png" alt="AVNIGOLD Logo" className={styles.logoImage} />              </div>
               <div className={styles.logoContent}>
                 <span className={styles.brandName}>AVNIGOLD</span>
                 <span className={styles.brandTagline}>Premium Seeds</span>
