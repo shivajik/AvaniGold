@@ -38,7 +38,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "/images/products/soybean_1.jpg",
+    imageUrl: "/images/products/MAHALAXMI.png",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "90 to 100 days"
@@ -55,7 +55,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "/images/products/soybean_2.jpg",
+    imageUrl: "/images/products/SHAMBHO.png",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "100 to 105 days"
@@ -89,7 +89,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "/images/products/soybean_2.jpg",
+    imageUrl: "/images/products/SUREKHA.png",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "100 to 105 days"
@@ -206,7 +206,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "/images/products/wheat_1.jpg",
+    imageUrl: "/images/products/SHRIHARI-111.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "105-115 days"
@@ -221,7 +221,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "/images/products/wheat_2.jpg",
+    imageUrl: "/images/products/AVNI400.jpg",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "115-125 days"
@@ -253,7 +253,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "/images/products/paddy_1.jpg",
+    imageUrl: "/images/products/SARTHAK.png",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "120-125 days"
@@ -269,7 +269,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "/images/products/paddy_2.jpg",
+    imageUrl: "/images/products/NITALI.png",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "135-140 days"
@@ -285,7 +285,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 220-250",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "/images/products/paddy_1.jpg",
+    imageUrl: "/images/products/KRUSHNA.png",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "130-140 days"
@@ -302,7 +302,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 250-270",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "/images/products/paddy_2.jpg",
+    imageUrl: "/images/products/AVNI-999.png",
     certifications: ["Certified Hybrid"],
     yieldPotential: "High Yield",
     maturityDays: "120-125 days"
@@ -318,7 +318,7 @@ export const products: Product[] = [
       "No. of grains/panicle: 250-270",
       "Tolerant to major disease & insect"
     ],
-    imageUrl: "/images/products/paddy_1.jpg",
+    imageUrl: "/images/products/AVNI-801.png",
     certifications: ["Certified Hybrid"],
     yieldPotential: "High Yield",
     maturityDays: "135-140 days"
@@ -334,7 +334,7 @@ export const products: Product[] = [
       "Head Diameter 20-22 cm",
       "Grain Yield 16-18 Qtls"
     ],
-    imageUrl: "/images/products/sunflower.jpg",
+    imageUrl: "/images/products/TEJAS.png",
     certifications: ["Certified Hybrid"],
     yieldPotential: "16-18 Qtls",
     maturityDays: "90-100 days"
