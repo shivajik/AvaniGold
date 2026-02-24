@@ -252,6 +252,21 @@
   font-weight: 600;
 }
 
+.productBagsSection {
+  padding: var(--space-12) 0;
+  background-color: var(--color-neutral-2);
+}
+
+.productBagsImage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+  border-radius: var(--radius-4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 768px) {
   .productsGrid {
     grid-template-columns: 1fr;

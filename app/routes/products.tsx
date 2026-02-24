@@ -117,6 +117,13 @@ export default function Products() {
             ))}
           </div>
         </section>
+
+        {/* Product Bags Section */}
+        <section className={styles.productBagsSection}>
+          <div className={styles.sectionContainer}>
+            <img src="/product-bags.png" alt="AVNIGOLD Product Bags" className={styles.productBagsImage} />
+          </div>
+        </section>
       </main>
 
       <Footer />

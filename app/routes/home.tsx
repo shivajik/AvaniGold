@@ -213,6 +213,13 @@ export default function HomeSlider() {
           </div>
         </section>
 
+        {/* Product Bags Section */}
+        <section className={styles.productBagsSection}>
+          <div className={styles.sectionContainer}>
+            <img src="/product-bags.png" alt="AVNIGOLD Product Bags" className={styles.productBagsImage} />
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section className={styles.testimonialsSection}>
           <div className={styles.sectionContainer}>
