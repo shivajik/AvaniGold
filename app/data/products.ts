@@ -72,7 +72,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "/images/products/soyabean.jpg",
+    imageUrl: "/images/products/chitransh.png",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "90 to 100 days"
@@ -107,7 +107,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "145-155 days North India (Winter)"
     ],
-    imageUrl: "/images/products/maize_1.jpg",
+    imageUrl: "/images/products/maize-1.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "110-155 days"
@@ -124,7 +124,7 @@ export const products: Product[] = [
       "115-125 days Central & South India",
       "145-155 days North India (Winter)"
     ],
-    imageUrl: "/images/products/maize_2.jpg",
+    imageUrl: "/images/products/maize-2.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "105-155 days"
@@ -174,7 +174,7 @@ export const products: Product[] = [
       "Suitable for rainfed and irrigated condition",
       "Medium maturing variety"
     ],
-    imageUrl: "/images/products/bengalgram.jpg",
+    imageUrl: "/images/products/bengal-gram.png",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yielding",
     maturityDays: "100-110 days"
@@ -190,7 +190,7 @@ export const products: Product[] = [
       "Indeterminate plant type",
       "High yield potential"
     ],
-    imageUrl: "/images/products/redgram.jpg",
+    imageUrl: "/images/products/red-gram-mamta.png",
     certifications: ["Quality Tested"],
     yieldPotential: "20-25 Q/ha",
     maturityDays: "160-170 days"
@@ -236,7 +236,7 @@ export const products: Product[] = [
       "Dark Green Leaves with profuse tillering",
       "Ovate, Bold, Amber coloured grains"
     ],
-    imageUrl: "/images/products/wheat_1.jpg",
+    imageUrl: "/images/products/wheat-ankit-555.png",
     certifications: ["Quality Tested"],
     yieldPotential: "High Yield",
     maturityDays: "115-125 days"
