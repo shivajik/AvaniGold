@@ -44,9 +44,13 @@ export function Footer() {
                 <Mail className={styles.linkIcon} />
                 info@avnigoldseeds.com
               </a>
-              <a href="tel:+919876543210" className={styles.link}>
+              <a href="tel:+919981199400" className={styles.link}>
                 <Phone className={styles.linkIcon} />
-                +91 98765 43210
+                +91 99811 99400
+              </a>
+              <a href="tel:+919174499400" className={styles.link}>
+                <Phone className={styles.linkIcon} />
+                +91 91744 99400
               </a>
               <span className={styles.link}>
                 <MapPin className={styles.linkIcon} />

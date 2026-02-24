@@ -152,7 +152,7 @@
   transition: transform 0.3s var(--ease-out);
 }
 
-.navItem:hover .submenuIndicator {
+.navItem:hover .submenuIndicatorOpen {
   transform: rotate(90deg);
 }
 

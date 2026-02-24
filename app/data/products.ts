@@ -72,7 +72,7 @@ export const products: Product[] = [
       "Resistant for Yellow vein mosaic, Charcoal Rot and Septoria brown spot",
       "Easy for harvesting with the combine harvester"
     ],
-    imageUrl: "/images/products/soybean_1.jpg",
+    imageUrl: "/images/products/soyabean.jpg",
     certifications: ["Quality Tested", "Certified Seeds"],
     yieldPotential: "Highest Yielder",
     maturityDays: "90 to 100 days"
@@ -141,7 +141,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
-    imageUrl: "/images/products/maize_1.jpg",
+    imageUrl: "/images/products/maize-images.webp",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "108-160 days"
@@ -158,7 +158,7 @@ export const products: Product[] = [
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
-    imageUrl: "/images/products/maize_2.jpg",
+    imageUrl: "/images/products/maize.jpeg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
     maturityDays: "108-160 days"
@@ -367,7 +367,7 @@ export const products: Product[] = [
       "Bold, circular and smooth grains",
       "Matures in 105-110 days"
     ],
-    imageUrl: "/images/products/jowar_1.jpg",
+    imageUrl: "/images/products/hybrid-crop.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "105-110 days"
@@ -399,7 +399,7 @@ export const products: Product[] = [
       "Suitable for rainfed and irrigated condition",
       "High yielding and Tolerant to fusarium wilt"
     ],
-    imageUrl: "/images/products/maize_1.jpg",
+    imageUrl: "/images/products/kala-chana.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
     maturityDays: "100-110 days"

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import { Menu, Sparkles, X, ChevronRight, Phone, Mail, MapPin, Wheat, Sprout, Package, Gem, Home, Building2, FlaskConical, BookOpen, Briefcase, MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./header.module.css";
 
@@ -8,17 +8,19 @@ export function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsExpanded, setProductsExpanded] = useState(false);
-  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+  const productsMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (productsMenuRef.current && !productsMenuRef.current.contains(event.target as Node)) {
+        setProductsExpanded(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const productCategories = [
-    {
-      name: "Vegetable Seeds",
-      icon: Sprout,
-      path: "/products?category=Vegetable%20Seeds",
-      items: ["Tomato", "Brinjal", "Okra", "Chilli", "Cucumber", "Cauliflower"],
-      description: "Premium quality seeds for home & commercial farming",
-      featured: true
-    },
     {
       name: "Field Crops",
       icon: Wheat,
@@ -73,7 +75,7 @@ export function Header() {
         <div className={styles.infoStripContent}>
           <div className={styles.infoItem}>
             <Phone size={16} />
-            <span>+91 98765 43210</span>
+            <span>+91 99811 99400, +91 91744 99400</span>
           </div>
           <div className={styles.infoDivider} />
           <div className={styles.infoItem}>
@@ -108,37 +110,26 @@ export function Header() {
             {navItems.map((item) => {
               const IconComp = item.icon;
               return (
-                <div key={item.path} className={styles.navItemWrapper}>
+                <div key={item.path} className={styles.navItemWrapper} ref={item.hasSubmenu ? productsMenuRef : null}>
                   {item.hasSubmenu ? (
                     <>
                       <div
                         className={classNames(styles.navItem, {
                           [styles.navItemActive]: isActive(item.path),
                         })}
-                        onMouseEnter={() => {
-                          if (hoverTimeout) clearTimeout(hoverTimeout);
-                          setProductsExpanded(true);
-                        }}
-                        onMouseLeave={() => {
-                          const timeout = setTimeout(() => setProductsExpanded(false), 200);
-                          setHoverTimeout(timeout);
-                        }}
+                        onClick={() => setProductsExpanded(!productsExpanded)}
+                        style={{ cursor: 'pointer' }}
                       >
                         <IconComp size={20} />
                         <span>{item.label}</span>
-                        <ChevronRight size={16} className={styles.submenuIndicator} />
+                        <ChevronRight size={16} className={classNames(styles.submenuIndicator, {
+                          [styles.submenuIndicatorOpen]: productsExpanded
+                        })} />
                       </div>
                       {productsExpanded && (
                         <div 
                           className={styles.submenuDropdown}
-                          onMouseEnter={() => {
-                            if (hoverTimeout) clearTimeout(hoverTimeout);
-                            setProductsExpanded(true);
-                          }}
-                          onMouseLeave={() => {
-                            const timeout = setTimeout(() => setProductsExpanded(false), 200);
-                            setHoverTimeout(timeout);
-                          }}
+                          onClick={() => setProductsExpanded(false)}
                         >
                           <div className={styles.megaMenuContainer}>
                             {/* Left Side - Categories */}
