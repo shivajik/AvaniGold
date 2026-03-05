@@ -391,7 +391,7 @@ export const products: Product[] = [
   {
     id: "sagar-11",
     name: "SAGAR-11 (Re. Bengalgram)",
-    category: "Hybrid Maize",
+    category: "Bengal Gram",
     description: "Widely adapted and suitable for all sorghum growing areas. Medium maturing hybrid.",
     features: [
       "Spreading plant type",
