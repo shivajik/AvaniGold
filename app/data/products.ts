@@ -120,14 +120,14 @@ export const products: Product[] = [
     features: [
       "Good response to high management",
       "Light orange semi flint kernels",
-      "Matures in 105-110 days (Rainy)",
+      "Matures in 110-155 days (Rainy)",
       "115-125 days Central & South India",
       "145-155 days North India (Winter)"
     ],
     imageUrl: "/images/products/maize-2.jpg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
-    maturityDays: "105-155 days"
+    maturityDays: "110-155 days"
   },
   {
     id: "maize-amh-7700",
@@ -137,14 +137,14 @@ export const products: Product[] = [
     features: [
       "Uniform ears with good photosynthetic efficiency",
       "Yellow flint / semi flint kernels",
-      "Matures in 108-118 days (Rainy)",
+      "Matures in 110-155 days (Rainy)",
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
     imageUrl: "/images/products/maize-images.webp",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
-    maturityDays: "108-160 days"
+    maturityDays: "110-155 days"
   },
   {
     id: "maize-amh-2535",
@@ -154,14 +154,14 @@ export const products: Product[] = [
     features: [
       "Uniform ears with good photosynthetic efficiency",
       "Yellow flint / semi flint kernels",
-      "Matures in 108-118 days (Rainy)",
+      "Matures in 110-155 days (Rainy)",
       "120-130 days Central & South India",
       "150-160 days North India (Winter)"
     ],
     imageUrl: "/images/products/maize.jpeg",
     certifications: ["Certified Hybrid", "Quality Assured"],
     yieldPotential: "High Yield Potential",
-    maturityDays: "108-160 days"
+    maturityDays: "110-155 days"
   },
   // Bengal Gram
   {
@@ -402,6 +402,6 @@ export const products: Product[] = [
     imageUrl: "/images/products/kala-chana.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
-    maturityDays: "100-110 days"
+    maturityDays: "110-155 days"
   }
 ];
