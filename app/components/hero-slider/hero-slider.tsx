@@ -24,32 +24,15 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&h=1080&fit=crop",
-    badge: "Premium Quality Seeds",
-    title: "Cultivating Excellence,",
-    highlight: "One Seed at a Time",
+    image: "/paddy.jpg",
+    badge: "High Yield Paddy",
+    title: "Superior Paddy Seeds,",
+    highlight: "Bumper Harvests",
     description:
-      "AVNIGOLD SEEDS PRIVATE LIMITED - Your trusted partner for premium agricultural seeds. Based in Mandsaur, Madhya Pradesh, we deliver quality that helps farmers grow success.",
+      "Our premium paddy varieties are engineered for high yield and excellent grain quality. Trusted by farmers for consistent performance across diverse climatic conditions.",
     primaryCTA: {
-      text: "Explore Products",
-      link: "/products",
-    },
-    secondaryCTA: {
-      text: "Get in Touch",
-      link: "/contact",
-    },
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1920&h=1080&fit=crop",
-    badge: "Certified Excellence",
-    title: "Superior Quality,",
-    highlight: "Guaranteed Results",
-    description:
-      "Every seed undergoes rigorous testing to ensure 98% germination rate. Experience the difference that premium quality makes in your harvest with AVNIGOLD's certified varieties.",
-    primaryCTA: {
-      text: "View Quality Standards",
-      link: "/quality",
+      text: "View Paddy Varieties",
+      link: "/products?category=Paddy",
     },
     secondaryCTA: {
       text: "Contact Us",
@@ -57,16 +40,16 @@ const slides: Slide[] = [
     },
   },
   {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&h=1080&fit=crop",
-    badge: "Wide Range Available",
-    title: "500+ Varieties,",
+    id: 2,
+    image: "/wheat.jpg",
+    badge: "Premium Wheat Seeds",
+    title: "Robust Wheat Varieties,",
     highlight: "Infinite Possibilities",
     description:
-      "From vegetables to field crops, discover our extensive collection of premium seeds. Trusted by over 5,000 farmers across 15+ states for superior yields and consistent performance.",
+      "From high-protein to drought-resistant varieties, discover our extensive collection of premium wheat seeds. Engineered for superior yields and consistent performance.",
     primaryCTA: {
-      text: "Browse Collection",
-      link: "/products",
+      text: "Browse Wheat Seeds",
+      link: "/products?category=Wheat",
     },
     secondaryCTA: {
       text: "Learn More",
