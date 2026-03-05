@@ -24,23 +24,6 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/hero-bg.png",
-    badge: "Premium Quality Seeds",
-    title: "Cultivating Excellence,",
-    highlight: "One Seed at a Time",
-    description:
-      "AVNIGOLD SEEDS PRIVATE LIMITED - Your trusted partner for premium agricultural seeds. Based in Mandsaur, Madhya Pradesh, we deliver quality that helps farmers grow success.",
-    primaryCTA: {
-      text: "Explore Products",
-      link: "/products",
-    },
-    secondaryCTA: {
-      text: "Get in Touch",
-      link: "/contact",
-    },
-  },
-  {
-    id: 2,
     image: "/paddy.jpg",
     badge: "High Yield Paddy",
     title: "Superior Paddy Seeds,",
@@ -57,7 +40,7 @@ const slides: Slide[] = [
     },
   },
   {
-    id: 3,
+    id: 2,
     image: "/wheat.jpg",
     badge: "Premium Wheat Seeds",
     title: "Robust Wheat Varieties,",
