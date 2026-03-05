@@ -366,6 +366,10 @@
     right: var(--space-3);
   }
 
+  .navButton {
+    display: none;
+  }
+
   .pagination {
     bottom: var(--space-5);
   }
