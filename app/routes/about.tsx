@@ -2,7 +2,6 @@ import type { Route } from "./+types/about";
 import { Target, Heart, Lightbulb, Users, Award, TrendingUp } from "lucide-react";
 import { Header } from "~/components/header/header";
 import { Footer } from "~/components/footer/footer";
-import { teamMembers } from "~/data/team";
 import styles from "./about.module.css";
 
 export function meta({}: Route.MetaArgs) {
@@ -168,24 +167,6 @@ export default function About() {
           </div>
         </section>
 
-        <section className={styles.teamSection}>
-          <span className={styles.sectionLabel}>Meet Our Leaders</span>
-          <h2 className={styles.sectionTitle}>Leadership Team</h2>
-          <div className={styles.teamGrid}>
-            {teamMembers.map((member) => (
-              <div key={member.id} className={styles.teamCard}>
-                <div className={styles.teamImageWrapper}>
-                  <img src={member.imageUrl} alt={member.name} />
-                </div>
-                <div className={styles.teamInfo}>
-                  <h3>{member.name}</h3>
-                  <div className={styles.teamPosition}>{member.position}</div>
-                  <p>{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
 
       <Footer />
