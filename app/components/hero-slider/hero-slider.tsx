@@ -7,15 +7,15 @@ import styles from "./hero-slider.module.css";
 interface Slide {
   id: number;
   image: string;
-  badge: string;
-  title: string;
-  highlight: string;
-  description: string;
-  primaryCTA: {
+  badge?: string;
+  title?: string;
+  highlight?: string;
+  description?: string;
+  primaryCTA?: {
     text: string;
     link: string;
   };
-  secondaryCTA: {
+  secondaryCTA?: {
     text: string;
     link: string;
   };
@@ -55,6 +55,18 @@ const slides: Slide[] = [
       text: "Learn More",
       link: "/about",
     },
+  },
+   {
+    id: 3,
+    image: "/images/products/slide3.png",
+  },
+  {
+    id: 4,
+    image: "/images/products/slide4.png",
+  },
+  {
+    id: 5,
+    image: "/images/products/slide5.png",
   },
 ];
 
@@ -113,7 +125,7 @@ export function HeroSlider() {
             key={s.id}
             className={`${styles.slideBackground} ${
               idx === currentSlide ? styles.activeSlide : ""
-            }`}
+            } ${!s.title && !s.badge && !s.description ? styles.imageOnly : ""}`}
             style={{ backgroundImage: `url(${s.image})` }}
           >
             <div className={styles.slideOverlay} />
@@ -122,6 +134,7 @@ export function HeroSlider() {
       </div>
 
       {/* Content Container */}
+      {(slide.title || slide.badge || slide.description) && (
       <div className={styles.contentContainer}>
         <div className={styles.slideContent}>
           {/* Badge */}
@@ -156,17 +169,18 @@ export function HeroSlider() {
             style={{ animationDelay: "0.8s" }}
           >
             <Button asChild size="lg" className={styles.primaryBtn}>
-              <Link to={slide.primaryCTA.link}>
-                {slide.primaryCTA.text}
+              <Link to={slide.primaryCTA?.link}>
+                {slide.primaryCTA?.text}
                 <ArrowRight size={20} />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className={styles.secondaryBtn}>
-              <Link to={slide.secondaryCTA.link}>{slide.secondaryCTA.text}</Link>
+              <Link to={slide.secondaryCTA?.link}>{slide.secondaryCTA?.text}</Link>
             </Button>
           </div>
         </div>
       </div>
+      )}
 
       {/* Navigation Controls */}
       <button

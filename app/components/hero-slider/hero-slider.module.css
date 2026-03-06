@@ -412,3 +412,15 @@
     height: 14px;
   }
 }
+
+.slideBackground {
+  background-size: cover;  /* existing */
+  background-position: center;  /* existing */
+}
+
+/* Add this new class */
+.slideBackground.imageOnly {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000; /* or white: #fff */
+}
