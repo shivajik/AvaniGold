@@ -1,5 +1,7 @@
 import type { Route } from "./+types/contact";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { data, useFetcher } from "react-router";
+import { z } from "zod/v4";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { Header } from "~/components/header/header";
 import { Footer } from "~/components/footer/footer";
 import { Button } from "~/components/ui/button/button";
@@ -7,6 +9,36 @@ import { Input } from "~/components/ui/input/input";
 import { Textarea } from "~/components/ui/textarea/textarea";
 import { Label } from "~/components/ui/label/label";
 import styles from "./contact.module.css";
+
+const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters").max(100),
+  email: z.email("Please enter a valid email address"),
+  phone: z.string().max(20).optional().default(""),
+  subject: z.string().min(3, "Subject must be at least 3 characters").max(200),
+  message: z.string().min(10, "Message must be at least 10 characters").max(5000),
+});
+
+export async function action({ request }: Route.ActionArgs) {
+  const formData = await request.formData();
+  const raw = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  };
+
+  const result = contactSchema.safeParse(raw);
+  if (!result.success) {
+    return data(
+      { success: false, errors: z.flattenError(result.error).fieldErrors },
+      { status: 400 }
+    );
+  }
+
+  console.log("Contact form submission received at:", new Date().toISOString());
+  return data({ success: true, errors: null });
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -34,14 +66,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Implement form submission logic here
-    // In production, this should POST to a secure backend endpoint
-    const formData = new FormData(e.currentTarget);
-    console.log('Form submitted:', Object.fromEntries(formData));
-    // Add toast notification or redirect on success
-  };
+  const fetcher = useFetcher<typeof action>();
+  const isSubmitting = fetcher.state !== "idle";
+  const actionData = fetcher.data;
   const contactInfo = [
     {
       icon: Mail,
@@ -102,41 +129,53 @@ export default function Contact() {
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and we'll get back to you as soon as possible.</p>
               </div>
-              <form className={styles.form} onSubmit={handleSubmit}>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" type="text" placeholder="John Doe" required />
-                  </div>
-
-                  <div className={styles.formGroup}>
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" required />
-                  </div>
+              {actionData?.success ? (
+                <div className={styles.successMessage}>
+                  <CheckCircle className={styles.successIcon} />
+                  <h3>Message Sent Successfully</h3>
+                  <p>Thank you for reaching out. We'll get back to you soon.</p>
                 </div>
+              ) : (
+                <fetcher.Form method="post" className={styles.form}>
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <Label htmlFor="name">Full Name</Label>
+                      <Input id="name" name="name" type="text" placeholder="John Doe" required />
+                      {actionData?.errors?.name && <p className={styles.fieldError}>{actionData.errors.name[0]}</p>}
+                    </div>
 
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+91 98765 43210" />
+                    <div className={styles.formGroup}>
+                      <Label htmlFor="email">Email Address</Label>
+                      <Input id="email" name="email" type="email" placeholder="john@example.com" required />
+                      {actionData?.errors?.email && <p className={styles.fieldError}>{actionData.errors.email[0]}</p>}
+                    </div>
+                  </div>
+
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <Label htmlFor="phone">Phone Number</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                      <Label htmlFor="subject">Subject</Label>
+                      <Input id="subject" name="subject" type="text" placeholder="How can we help?" required />
+                      {actionData?.errors?.subject && <p className={styles.fieldError}>{actionData.errors.subject[0]}</p>}
+                    </div>
                   </div>
 
                   <div className={styles.formGroup}>
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" type="text" placeholder="How can we help?" required />
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" name="message" placeholder="Tell us more about your inquiry..." rows={6} required />
+                    {actionData?.errors?.message && <p className={styles.fieldError}>{actionData.errors.message[0]}</p>}
                   </div>
-                </div>
 
-                <div className={styles.formGroup}>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell us more about your inquiry..." rows={6} required />
-                </div>
-
-                <Button type="submit" size="lg" className={styles.submitBtn}>
-                  <Send className={styles.btnIcon} />
-                  Send Message
-                </Button>
-              </form>
+                  <Button type="submit" size="lg" className={styles.submitBtn} disabled={isSubmitting}>
+                    <Send className={styles.btnIcon} />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </fetcher.Form>
+              )}
             </div>
           </div>
 
