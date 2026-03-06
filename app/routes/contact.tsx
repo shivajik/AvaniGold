@@ -88,7 +88,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      lines: ["+91 98765 43210", "+91 98765 43211"],
+      lines: ["+91 99811 99400", "+91 91744 99400"],
     },
     {
       icon: MapPin,

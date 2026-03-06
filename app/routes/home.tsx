@@ -238,7 +238,7 @@ export default function HomeSlider() {
                     ))}
                   </div>
                   <p className={styles.testimonialQuote}>"{testimonial.quote}"</p>
-                  <div className={styles.testimonialFooter}>
+                  {/* <div className={styles.testimonialFooter}>
                     <div className={styles.testimonialAvatar}>
                       {testimonial.author.charAt(0)}
                     </div>
@@ -246,7 +246,7 @@ export default function HomeSlider() {
                       <div className={styles.testimonialAuthor}>{testimonial.author}</div>
                       <div className={styles.testimonialLocation}>{testimonial.location}</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
