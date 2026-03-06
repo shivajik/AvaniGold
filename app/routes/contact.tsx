@@ -1,6 +1,7 @@
 import type { Route } from "./+types/contact";
 import { data, useFetcher } from "react-router";
 import { z } from "zod/v4";
+import { sendContactNotification } from "~/utils/mailer.server";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { Header } from "~/components/header/header";
 import { Footer } from "~/components/footer/footer";
@@ -36,7 +37,16 @@ export async function action({ request }: Route.ActionArgs) {
     );
   }
 
-  console.log("Contact form submission received at:", new Date().toISOString());
+  try {
+    await sendContactNotification(result.data);
+  } catch (err) {
+    console.error("Failed to send contact email:", err);
+    return data(
+      { success: false, errors: { message: ["Failed to send message. Please try again later."] } },
+      { status: 500 }
+    );
+  }
+
   return data({ success: true, errors: null });
 }
 
