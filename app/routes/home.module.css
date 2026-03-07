@@ -145,7 +145,7 @@
 /* Benefits Section */
 .benefitsSection {
   padding: var(--space-9) var(--space-6);
-  background: white;
+  background: var(--color-neutral-1);
 }
 
 .sectionContainer {
@@ -262,7 +262,7 @@
 .ctaContent button,
 .ctaContent a {
   background: white;
-  color: var(--color-accent-11);
+  color: #ad6200;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -286,7 +286,7 @@
 
 .testimonialCard {
   padding: var(--space-6);
-  background: white;
+  background: var(--color-neutral-2);
   border: 2px solid var(--color-neutral-3);
   border-radius: var(--radius-4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -351,7 +351,7 @@
 /* Quality Section */
 .qualitySection {
   padding: var(--space-9) var(--space-6);
-  background: white;
+  background: var(--color-neutral-1);
 }
 
 .qualityContent {

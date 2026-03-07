@@ -1,6 +1,6 @@
 /* Info Strip */
 .infoStrip {
-  background: linear-gradient(90deg, var(--color-neutral-12), var(--color-accent-11));
+  background: linear-gradient(90deg, #1c2024, #ad6200);
   color: white;
   padding: var(--space-2) 0;
   font-size: var(--font-size-0);
@@ -33,7 +33,7 @@
 
 /* Main Header */
 .header {
-  background: white;
+  background: var(--color-neutral-1);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -71,7 +71,7 @@
 .logoIcon {
   width: 56px;
   height: 56px;
-  background: white;
+  background: var(--color-neutral-1);
   border-radius: var(--radius-4);
   display: flex;
   align-items: center;
@@ -163,7 +163,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 1000px;
-  background: white;
+  background: var(--color-neutral-1);
   border-radius: var(--radius-5);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--color-accent-4);
   z-index: 1000;
@@ -216,7 +216,7 @@
   display: flex;
   gap: var(--space-3);
   padding: var(--space-5);
-  background: white;
+  background: var(--color-neutral-1);
   border: 2px solid var(--color-neutral-3);
   border-radius: var(--radius-4);
   text-decoration: none;
@@ -249,7 +249,7 @@
 }
 
 .categoryCardFeatured {
-  background: linear-gradient(135deg, var(--color-accent-2) 0%, white 100%);
+  background: linear-gradient(135deg, var(--color-accent-2) 0%, var(--color-neutral-1) 100%);
   border-color: var(--color-accent-5);
 }
 
@@ -326,7 +326,7 @@
 
 /* Featured Product */
 .featuredProduct {
-  background: white;
+  background: var(--color-neutral-1);
   border-radius: var(--radius-4);
   overflow: hidden;
   border: 2px solid var(--color-accent-4);
@@ -389,7 +389,7 @@
 
 /* Quick Links */
 .quickLinks {
-  background: white;
+  background: var(--color-neutral-1);
   border-radius: var(--radius-4);
   padding: var(--space-4);
   border: 2px solid var(--color-neutral-3);
@@ -520,7 +520,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4);
-  background: white;
+  background: var(--color-neutral-2);
   border: 2px solid var(--color-neutral-3);
   border-radius: var(--radius-3);
   color: var(--color-neutral-12);
@@ -553,7 +553,7 @@
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-4);
-  background: white;
+  background: var(--color-neutral-2);
   border: 2px solid var(--color-neutral-3);
   border-radius: var(--radius-3);
   color: var(--color-neutral-12);
