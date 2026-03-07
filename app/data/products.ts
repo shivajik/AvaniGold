@@ -402,6 +402,6 @@ export const products: Product[] = [
     imageUrl: "/images/products/kala-chana.jpg",
     certifications: ["Quality Certified", "High Yield"],
     yieldPotential: "High Yield",
-    maturityDays: "110-155 days"
+    maturityDays: "110-115 days"
   }
 ];
