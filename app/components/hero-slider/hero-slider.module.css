@@ -322,7 +322,7 @@
 @media (max-width: 768px) {
   .heroSlider {
     height: auto;
-    min-height: auto;
+    min-height: 500px;
   }
 
   .contentContainer {
@@ -391,7 +391,7 @@
 
 @media (max-width: 640px) {
   .heroSlider {
-    min-height: auto;
+    min-height: 400px;
   }
 
   .contentContainer {
@@ -413,14 +413,11 @@
   }
 }
 
-.slideBackground {
-  background-size: cover;  /* existing */
-  background-position: center;  /* existing */
-}
-
-/* Add this new class */
-.slideBackground.imageOnly {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #000; /* or white: #fff */
+.slideBackground.imageOnly .slideOverlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
 }
