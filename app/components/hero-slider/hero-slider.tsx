@@ -25,36 +25,36 @@ const slides: Slide[] = [
   {
     id: 1,
     image: "/paddy.jpg",
-    badge: "High Yield Paddy",
-    title: "Superior Paddy Seeds,",
-    highlight: "Bumper Harvests",
-    description:
-      "Our premium paddy varieties are engineered for high yield and excellent grain quality. Trusted by farmers for consistent performance across diverse climatic conditions.",
-    primaryCTA: {
-      text: "View Paddy Varieties",
-      link: "/products?category=Paddy",
-    },
-    secondaryCTA: {
-      text: "Contact Us",
-      link: "/contact",
-    },
+    // badge: "High Yield Paddy",
+    // title: "Superior Paddy Seeds,",
+    // highlight: "Bumper Harvests",
+    // description:
+    //   "Our premium paddy varieties are engineered for high yield and excellent grain quality. Trusted by farmers for consistent performance across diverse climatic conditions.",
+    // primaryCTA: {
+    //   text: "View Paddy Varieties",
+    //   link: "/products?category=Paddy",
+    // },
+    // secondaryCTA: {
+    //   text: "Contact Us",
+    //   link: "/contact",
+    // },
   },
   {
     id: 2,
     image: "/wheat.jpg",
-    badge: "Premium Wheat Seeds",
-    title: "Robust Wheat Varieties,",
-    highlight: "Infinite Possibilities",
-    description:
-      "From high-protein to drought-resistant varieties, discover our extensive collection of premium wheat seeds. Engineered for superior yields and consistent performance.",
-    primaryCTA: {
-      text: "Browse Wheat Seeds",
-      link: "/products?category=Wheat",
-    },
-    secondaryCTA: {
-      text: "Learn More",
-      link: "/about",
-    },
+    // badge: "Premium Wheat Seeds",
+    // title: "Robust Wheat Varieties,",
+    // highlight: "Infinite Possibilities",
+    // description:
+    //   "From high-protein to drought-resistant varieties, discover our extensive collection of premium wheat seeds. Engineered for superior yields and consistent performance.",
+    // primaryCTA: {
+    //   text: "Browse Wheat Seeds",
+    //   link: "/products?category=Wheat",
+    // },
+    // secondaryCTA: {
+    //   text: "Learn More",
+    //   link: "/about",
+    // },
   },
    {
     id: 3,
