@@ -216,7 +216,7 @@ export default function HomeSlider() {
         {/* Product Bags Section */}
         <section className={styles.productBagsSection}>
           <div className={styles.sectionContainer}>
-            <img src="/product-bags.png" alt="AVNIGOLD Product Bags" className={styles.productBagsImage} />
+            <img src="/product-bags.webp" alt="AVNIGOLD Product Bags" className={styles.productBagsImage} />
           </div>
         </section>
 
