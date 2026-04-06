@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "~/components/ui/button/button";
@@ -25,36 +25,36 @@ const slides: Slide[] = [
   {
     id: 1,
     image: "/paddy.jpg",
-    badge: "High Yield Paddy",
-    title: "Superior Paddy Seeds,",
-    highlight: "Bumper Harvests",
-    description:
-      "Our premium paddy varieties are engineered for high yield and excellent grain quality. Trusted by farmers for consistent performance across diverse climatic conditions.",
-    primaryCTA: {
-      text: "View Paddy Varieties",
-      link: "/products?category=Paddy",
-    },
-    secondaryCTA: {
-      text: "Contact Us",
-      link: "/contact",
-    },
+    // badge: "High Yield Paddy",
+    // title: "Superior Paddy Seeds,",
+    // highlight: "Bumper Harvests",
+    // description:
+    //   "Our premium paddy varieties are engineered for high yield and excellent grain quality. Trusted by farmers for consistent performance across diverse climatic conditions.",
+    // primaryCTA: {
+    //   text: "View Paddy Varieties",
+    //   link: "/products?category=Paddy",
+    // },
+    // secondaryCTA: {
+    //   text: "Contact Us",
+    //   link: "/contact",
+    // },
   },
   {
     id: 2,
     image: "/wheat.jpg",
-    badge: "Premium Wheat Seeds",
-    title: "Robust Wheat Varieties,",
-    highlight: "Infinite Possibilities",
-    description:
-      "From high-protein to drought-resistant varieties, discover our extensive collection of premium wheat seeds. Engineered for superior yields and consistent performance.",
-    primaryCTA: {
-      text: "Browse Wheat Seeds",
-      link: "/products?category=Wheat",
-    },
-    secondaryCTA: {
-      text: "Learn More",
-      link: "/about",
-    },
+    // badge: "Premium Wheat Seeds",
+    // title: "Robust Wheat Varieties,",
+    // highlight: "Infinite Possibilities",
+    // description:
+    //   "From high-protein to drought-resistant varieties, discover our extensive collection of premium wheat seeds. Engineered for superior yields and consistent performance.",
+    // primaryCTA: {
+    //   text: "Browse Wheat Seeds",
+    //   link: "/products?category=Wheat",
+    // },
+    // secondaryCTA: {
+    //   text: "Learn More",
+    //   link: "/about",
+    // },
   },
    {
     id: 3,
@@ -74,6 +74,8 @@ export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   const nextSlide = useCallback(() => {
     if (isAnimating) return;
@@ -110,6 +112,32 @@ export function HeroSlider() {
     return () => clearInterval(interval);
   }, [nextSlide, isPaused]);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    const minSwipeDistance = 50;
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+      if (deltaX < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  }, [nextSlide, prevSlide]);
+
+  const handleTouchCancel = useCallback(() => {
+    touchStartX.current = null;
+    touchStartY.current = null;
+  }, []);
+
   const slide = slides[currentSlide];
 
   return (
@@ -117,6 +145,9 @@ export function HeroSlider() {
       className={styles.heroSlider}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchCancel}
     >
       {/* Background Images */}
       <div className={styles.slidesContainer}>
