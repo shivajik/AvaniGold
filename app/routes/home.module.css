@@ -145,7 +145,7 @@
 /* Benefits Section */
 .benefitsSection {
   padding: var(--space-9) var(--space-6);
-  background: white;
+  background: var(--color-neutral-1);
 }
 
 .sectionContainer {
@@ -286,7 +286,7 @@
 
 .testimonialCard {
   padding: var(--space-6);
-  background: white;
+  background: var(--color-neutral-1);
   border: 2px solid var(--color-neutral-3);
   border-radius: var(--radius-4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -351,7 +351,7 @@
 /* Quality Section */
 .qualitySection {
   padding: var(--space-9) var(--space-6);
-  background: white;
+  background: var(--color-neutral-1);
 }
 
 .qualityContent {
@@ -437,18 +437,26 @@
 }
 
 .productBagsSection {
-  padding: var(--space-12) 0;
+  padding: var(--space-9) var(--space-6);
   background-color: var(--color-neutral-2);
 }
 
 .productBagsImage {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
+  max-height: 520px;
   margin: 0 auto;
   display: block;
   height: auto;
+  object-fit: contain;
   border-radius: var(--radius-4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .productBagsImage {
+    max-height: 360px;
+  }
 }
 
 /* Responsive */
