@@ -1,5 +1,6 @@
 import type { Route } from "./+types/contact";
-import { data, useFetcher } from "react-router";
+import { useEffect, useRef } from "react";
+import { data, useFetcher, useLoaderData } from "react-router";
 import { z } from "zod/v4";
 import { sendContactNotification } from "~/utils/mailer.server";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
@@ -19,8 +20,62 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters").max(5000),
 });
 
-export async function action({ request }: Route.ActionArgs) {
+export function loader() {
+  return { siteKey: process.env.RECAPTCHA_SITE_KEY ?? "" };
+}
+
+async function verifyRecaptcha(token: string, remoteIp?: string | null): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) {
+    console.error("RECAPTCHA_SECRET_KEY is not configured");
+    return false;
+  }
+  try {
+    const body = new URLSearchParams({ secret, response: token });
+    if (remoteIp) body.append("remoteip", remoteIp);
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    });
+    const json = (await res.json()) as { success: boolean };
+    return json.success === true;
+  } catch (err) {
+    console.error("reCAPTCHA verify failed:", err);
+    return false;
+  }
+}
+
+type FieldErrors = {
+  name?: string[];
+  email?: string[];
+  phone?: string[];
+  subject?: string[];
+  message?: string[];
+};
+type ActionResult =
+  | { success: true; errors: null }
+  | { success: false; errors: FieldErrors };
+
+export async function action({ request }: Route.ActionArgs): Promise<ReturnType<typeof data<ActionResult>>> {
   const formData = await request.formData();
+
+  const captchaToken = String(formData.get("g-recaptcha-response") ?? "");
+  if (!captchaToken) {
+    return data<ActionResult>(
+      { success: false, errors: { message: ["Please complete the captcha before submitting."] } },
+      { status: 400 }
+    );
+  }
+  const remoteIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null;
+  const captchaOk = await verifyRecaptcha(captchaToken, remoteIp);
+  if (!captchaOk) {
+    return data<ActionResult>(
+      { success: false, errors: { message: ["Captcha verification failed. Please try again."] } },
+      { status: 400 }
+    );
+  }
+
   const raw = {
     name: formData.get("name"),
     email: formData.get("email"),
@@ -31,8 +86,8 @@ export async function action({ request }: Route.ActionArgs) {
 
   const result = contactSchema.safeParse(raw);
   if (!result.success) {
-    return data(
-      { success: false, errors: z.flattenError(result.error).fieldErrors },
+    return data<ActionResult>(
+      { success: false, errors: z.flattenError(result.error).fieldErrors as FieldErrors },
       { status: 400 }
     );
   }
@@ -41,13 +96,13 @@ export async function action({ request }: Route.ActionArgs) {
     await sendContactNotification(result.data);
   } catch (err) {
     console.error("Failed to send contact email:", err);
-    return data(
+    return data<ActionResult>(
       { success: false, errors: { message: ["Failed to send message. Please try again later."] } },
       { status: 500 }
     );
   }
 
-  return data({ success: true, errors: null });
+  return data<ActionResult>({ success: true, errors: null });
 }
 
 export function meta({}: Route.MetaArgs) {
@@ -76,9 +131,51 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Contact() {
+  const { siteKey } = useLoaderData<typeof loader>();
   const fetcher = useFetcher<typeof action>();
   const isSubmitting = fetcher.state !== "idle";
   const actionData = fetcher.data;
+  const captchaRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!siteKey || typeof window === "undefined") return;
+    const w = window as unknown as {
+      grecaptcha?: { render: (el: HTMLElement, opts: { sitekey: string }) => number; reset: (id?: number) => void };
+    };
+    const render = () => {
+      if (!captchaRef.current || widgetIdRef.current !== null || !w.grecaptcha?.render) return;
+      widgetIdRef.current = w.grecaptcha.render(captchaRef.current, { sitekey: siteKey });
+    };
+    if (w.grecaptcha?.render) {
+      render();
+      return;
+    }
+    const existing = document.querySelector<HTMLScriptElement>("script[data-recaptcha]");
+    if (!existing) {
+      const s = document.createElement("script");
+      s.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+      s.async = true;
+      s.defer = true;
+      s.dataset.recaptcha = "true";
+      document.head.appendChild(s);
+    }
+    const t = window.setInterval(() => {
+      if (w.grecaptcha?.render) {
+        render();
+        window.clearInterval(t);
+      }
+    }, 200);
+    return () => window.clearInterval(t);
+  }, [siteKey]);
+
+  useEffect(() => {
+    if (actionData && !actionData.success) {
+      const w = window as unknown as { grecaptcha?: { reset: (id?: number) => void } };
+      if (w.grecaptcha && widgetIdRef.current !== null) w.grecaptcha.reset(widgetIdRef.current);
+    }
+  }, [actionData]);
+
   const contactInfo = [
     {
       icon: Mail,
@@ -178,6 +275,13 @@ export default function Contact() {
                     <Label htmlFor="message">Message</Label>
                     <Textarea id="message" name="message" placeholder="Tell us more about your inquiry..." rows={6} required />
                     {actionData?.errors?.message && <p className={styles.fieldError}>{actionData.errors.message[0]}</p>}
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <div ref={captchaRef} />
+                    {!siteKey && (
+                      <p className={styles.fieldError}>Captcha is not configured. Set RECAPTCHA_SITE_KEY.</p>
+                    )}
                   </div>
 
                   <Button type="submit" size="lg" className={styles.submitBtn} disabled={isSubmitting}>

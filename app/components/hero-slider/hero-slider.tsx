@@ -200,13 +200,13 @@ export function HeroSlider() {
             style={{ animationDelay: "0.8s" }}
           >
             <Button asChild size="lg" className={styles.primaryBtn}>
-              <Link to={slide.primaryCTA?.link}>
+              <Link to={slide.primaryCTA?.link ?? "#"}>
                 {slide.primaryCTA?.text}
                 <ArrowRight size={20} />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className={styles.secondaryBtn}>
-              <Link to={slide.secondaryCTA?.link}>{slide.secondaryCTA?.text}</Link>
+              <Link to={slide.secondaryCTA?.link ?? "#"}>{slide.secondaryCTA?.text}</Link>
             </Button>
           </div>
         </div>
